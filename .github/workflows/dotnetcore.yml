@@ -14,4 +14,6 @@ jobs:
       with:
         dotnet-version: '7.0.x'
     - name: Build with dotnet
-      run: dotnet build --configuration Release
+      run: | 
+        dotnet build --configuration Release
+        curl localhost:5124/swagger/index.html
